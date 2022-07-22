@@ -1,20 +1,20 @@
 import './styles/fonts.scss';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './styles/GlobalStyles.jsx';
-import Header from './components/Header';
-
-const theme = {
-  color: {
-    white: '#ffffff',
-  },
-};
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Components from './pages/Components';
+import theme from './styles/theme';
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/components" element={<Components />} />
+        </Routes>
       </ThemeProvider>
     </>
   );
