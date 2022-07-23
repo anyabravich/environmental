@@ -93,10 +93,12 @@ const CircleOne = styled(CircleWrap)`
   margin-top: ${rem(-55)};
   margin-left: ${rem(-10)};
 `;
+
 const CircleTwo = styled(CircleWrap)`
   margin-top: ${rem(-163)};
   margin-left: ${rem(391)};
 `;
+
 const CircleThree = styled(CircleWrap)`
   margin-top: ${rem(-62)};
   margin-left: ${rem(191)};

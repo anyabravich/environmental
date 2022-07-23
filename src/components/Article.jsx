@@ -7,9 +7,10 @@ import ReadMore from './ReadMore';
 import BigNumber, { BigNumberWrap } from './BigNumber';
 
 const Article = ({
+  number = '01',
   title = 'Protect Our Earth Against Climate Change',
   img = 'images/article-1.jpg',
-  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin consectetur netus dui, ultrices ornare lectus ac egestas. Vivamus tellus vestibulum aliquet arcu a duis. Aliquam vel, in molestie morbi eleifend feugiat nunc fringilla in. Amet, sit elementum ut enim neque, adipiscing euismod ac. Molestie eu',
 }) => {
   return (
     <ArticleWrap>
@@ -19,7 +20,7 @@ const Article = ({
           <ArticleDescription>{description}</ArticleDescription>
           <ReadMore />
         </ArticleContent>
-        <ArticleBigNumber>01</ArticleBigNumber>
+        <ArticleBigNumber>{number}</ArticleBigNumber>
       </ArticleInner>
       <ArticleImg img={img} />
     </ArticleWrap>
@@ -30,6 +31,9 @@ const ArticleWrap = styled.article`
   margin-bottom: ${rem(160)};
   &:last-child {
     margin-bottom: 0;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin-bottom: ${rem(160 / 2)};
   }
 `;
 
@@ -48,7 +52,7 @@ const ArticleInner = styled.div`
   margin-bottom: ${rem(40)};
   @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
     flex-wrap: wrap;
-    gap: ${rem(40)};
+    gap: ${rem(20)};
   }
 `;
 const ArticleContent = styled.div``;
