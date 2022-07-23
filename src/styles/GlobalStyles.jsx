@@ -1,32 +1,43 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
+  *,
+  &::after,
+  &::before {
     box-sizing: border-box;
   }
-  html,
+
+  html {
+    font-size: 16px;
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
+  }
+
   body {
+    margin: 0;
     font-family: 'Inter', sans-serif;
   }
-  body {
-    font-size: 16px;
-    background: #F9F9F9;
-  }
-  li {
+
+  h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+  }
+
+  ul, ol {
     padding: 0;
+    margin: 0;
     list-style: none;
   }
+
   a {
-    font-family: 'Inter', sans-serif;
     text-decoration: none;
+    font-family: 'Inter', sans-serif;
   }
+
   button {
-    border: none;
     outline: none;
-    background: none;
+    border: none;
   }
 `;
+
 export default GlobalStyle;

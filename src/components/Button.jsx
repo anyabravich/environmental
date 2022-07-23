@@ -24,8 +24,19 @@ const ButtonWrap = styled.button`
   font-weight: 400;
   font-size: ${rem(14)};
   line-height: ${rem(24)};
-  padding: ${rem(12)};
-  min-width: ${rem(160)};
+  ${(props) => {
+    if (props.type === 'standard') {
+      return `
+        min-width: ${rem(120)};
+        padding: ${rem(12)} ${rem(15)};
+      `;
+    } else if (props.type === 'justify') {
+      return `
+        min-width: ${rem(160)};
+        padding: ${rem(12)} ${rem(35)};
+      `;
+    }
+  }}
   border-radius: ${(props) => rem(props.theme.radius.button)};
   font-family: 'Inter', sans-serif;
   cursor: pointer;
