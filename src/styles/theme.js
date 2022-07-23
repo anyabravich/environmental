@@ -5,6 +5,7 @@ const theme = {
     text: {
       title: '#2E2E2E',
       white: '#ffffff',
+      disable: '#E6E6E6',
     },
     primary: {
       default: '#53C351',
