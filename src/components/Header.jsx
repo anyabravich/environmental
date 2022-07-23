@@ -45,6 +45,9 @@ const HeaderWrap = styled.header`
   overflow: hidden;
   margin-bottom: ${rem(160)};
   margin-top: -1px;
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin-bottom: ${rem(160 / 2)};
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding-top: 0;
   }

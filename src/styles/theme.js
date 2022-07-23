@@ -6,10 +6,12 @@ const theme = {
       title: '#2E2E2E',
       white: '#ffffff',
       disable: '#E6E6E6',
+      body: '#808080',
     },
     primary: {
       default: '#53C351',
       hover: '#359433',
+      green: '#53C351',
     },
     secondary: {
       rich: {

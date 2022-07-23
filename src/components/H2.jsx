@@ -12,6 +12,9 @@ export const H2Wrap = styled.h2`
   line-height: 138%;
   color: ${(props) =>
     props.bgLight ? props.theme.colors.text.title : props.theme.colors.text.white};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    font-size: ${rem(54)};
+  }
 `;
 
 export default H2;
