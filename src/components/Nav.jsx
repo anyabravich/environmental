@@ -1,0 +1,35 @@
+import React from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
+import Container from './Container';
+import Logo from './Logo';
+import Menu from './Menu';
+import Button from './Button';
+
+const Nav = () => {
+  return (
+    <NavWrap>
+      <Container>
+        <NavInner>
+          <Logo />
+          <Menu />
+          <Button type={'standard'}>Login</Button>
+        </NavInner>
+      </Container>
+    </NavWrap>
+  );
+};
+
+const NavWrap = styled.nav`
+  padding: ${rem(32)} 0;
+  color: ${(props) => props.theme.colors.text.white};
+  background: ${(props) => props.theme.colors.secondary.rich.green};
+`;
+
+const NavInner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export default Nav;

@@ -1,0 +1,16 @@
+{
+  "articlesPosts": [
+    {
+      "number": "01",
+      "img": "images/article-1.jpg",
+      "title": "Protect Our Earth Against Climate Change",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin consectetur netus dui, ultrices ornare lectus ac egestas. Vivamus tellus vestibulum aliquet arcu a duis. Aliquam vel, in molestie morbi eleifend feugiat nunc fringilla in. Amet, sit elementum ut enim neque, adipiscing euismod ac. Molestie eu"
+    },
+    {
+      "number": "02",
+      "img": "images/article-2.jpg",
+      "title": "Together We Can Restore Our Planet",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin consectetur netus dui, ultrices ornare lectus ac egestas. Vivamus tellus vestibulum aliquet arcu a duis. Aliquam vel, in molestie morbi eleifend feugiat nunc fringilla in. Amet, sit elementum ut enim neque, adipiscing euismod ac. Molestie eu"
+    }
+  ]
+}
