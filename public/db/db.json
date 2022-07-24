@@ -1,4 +1,42 @@
 {
+  "missionItems": [
+    {
+      "img": "icon-1",
+      "imgHover": "icon-1-hover",
+      "title": "Solar System",
+      "description": "Make the appearance of a mobile application that has quality and increases user convenience"
+    },
+    {
+      "img": "icon-2",
+      "imgHover": "icon-2-hover",
+      "title": "Recycling",
+      "description": "Help create a website and redesign it so that it becomes a website that is more trendy and looks fresh"
+    },
+    {
+      "img": "icon-3",
+      "imgHover": "icon-3-hover",
+      "title": "Plant Trees",
+      "description": "Create customizable illustrations with attractive designs that are made visually through high creativity"
+    },
+    {
+      "img": "icon-4",
+      "imgHover": "icon-4-hover",
+      "title": "Clean Energy",
+      "description": "Change the appearance of a design into code that will be made into an amazing website"
+    },
+    {
+      "img": "icon-5",
+      "imgHover": "icon-5-hover",
+      "title": "Eco System",
+      "description": "Create 2d / 3d video animation in a short period of time designed to promote a company product"
+    },
+    {
+      "img": "icon-6",
+      "imgHover": "icon-6-hover",
+      "title": "Water Refine",
+      "description": "Help your business grow with our SEO Experts"
+    }
+  ],
   "articlesPosts": [
     {
       "number": "01",
