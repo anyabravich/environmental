@@ -28,7 +28,9 @@ const Missions = () => {
   );
 };
 
-const MissionsWrap = styled.section``;
+const MissionsWrap = styled.section`
+  padding: ${rem(160)} 0 ${rem(320)};
+`;
 
 const MissionsTitle = styled(H2Wrap)`
   max-width: ${rem(608)};

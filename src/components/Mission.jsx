@@ -30,6 +30,10 @@ const MissionWrap = styled.article`
     background: ${(props) => props.theme.colors.primary.dark.green};
     transition: background 100ms linear;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: ${rem(32)} 0;
+    pointer-events: none;
+  }
 `;
 
 // TODO: пересохранить все иконки без подложки, сделать подлодку средствами css

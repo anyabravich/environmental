@@ -25,6 +25,7 @@ const theme = {
   radius: {
     button: 8,
     mission: 16,
+    latest: 16,
   },
   transition: {
     hover: 'all 200ms linear',
