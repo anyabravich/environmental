@@ -19,15 +19,8 @@ const Missions = () => {
       <Container>
         <MissionsTitle bgLight={true}>Our Mission to Save the Planet</MissionsTitle>
         <MissionsItems>
-          {missionItems.map(({ img, imgHover, title, description }, index) => (
-            <Mission
-              img={img}
-              imgHover={imgHover}
-              title={title}
-              description={description}
-              key={index}
-              className={'mission'}
-            />
+          {missionItems.map(({ img, title, description }, index) => (
+            <Mission img={img} title={title} description={description} key={index} />
           ))}
         </MissionsItems>
       </Container>

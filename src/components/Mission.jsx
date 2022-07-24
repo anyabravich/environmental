@@ -9,13 +9,12 @@ import { TextBodyWrap } from './TextBody';
 const Mission = ({
   className,
   img = 'icon-1',
-  imgHover = 'icon-1-hover',
   title = 'Solar System',
   description = 'Make the appearance of a mobile application that has quality and increases user convenience',
 }) => {
   return (
-    <MissionWrap imgHover={imgHover}>
-      <MissionIcon img={img} imgHover={imgHover} className={className} />
+    <MissionWrap>
+      <MissionIcon img={img} className={className} />
       <MissionTitle bgLight={true}>{title}</MissionTitle>
       <MissionDescription>{description}</MissionDescription>
     </MissionWrap>
@@ -31,11 +30,6 @@ const MissionWrap = styled.article`
     background: ${(props) => props.theme.colors.primary.dark.green};
     transition: background 100ms linear;
   }
-  &:hover .mission {
-    background: url(${(props) => `images/mission/${props.imgHover}.svg`}) no-repeat center center;
-    transition: background 100ms linear;
-    background-size: cover;
-  }
 `;
 
 // TODO: пересохранить все иконки без подложки, сделать подлодку средствами css
@@ -47,9 +41,9 @@ const MissionIcon = styled.div`
   background: url(${(props) => `images/mission/${props.img}.svg`}) no-repeat center center;
   background-size: cover;
   transition: background 100ms linear;
-  ${MissionWrap}:hover & {
-    /* background: url(${(props) =>
-      `images/mission/${props.imgHover}.svg`}) no-repeat center center; */
+  ${MissionWrap}:hover && {
+    background: url(${(props) => `images/mission/${props.img}-hover.svg`}) no-repeat center center;
+    background-size: cover;
     transition: background 100ms linear;
   }
 `;
