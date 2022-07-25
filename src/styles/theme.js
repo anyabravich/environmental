@@ -35,6 +35,7 @@ const theme = {
     lg: '900px',
     xl: '1024px',
     xxl: '1200px',
+    xxxl: '1600px',
   },
 };
 
