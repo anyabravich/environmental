@@ -1,4 +1,36 @@
 {
+  "missionItems": [
+    {
+      "img": "icon-1",
+      "title": "Solar System",
+      "description": "Make the appearance of a mobile application that has quality and increases user convenience"
+    },
+    {
+      "img": "icon-2",
+      "title": "Recycling",
+      "description": "Help create a website and redesign it so that it becomes a website that is more trendy and looks fresh"
+    },
+    {
+      "img": "icon-3",
+      "title": "Plant Trees",
+      "description": "Create customizable illustrations with attractive designs that are made visually through high creativity"
+    },
+    {
+      "img": "icon-4",
+      "title": "Clean Energy",
+      "description": "Change the appearance of a design into code that will be made into an amazing website"
+    },
+    {
+      "img": "icon-5",
+      "title": "Eco System",
+      "description": "Create 2d / 3d video animation in a short period of time designed to promote a company product"
+    },
+    {
+      "img": "icon-6",
+      "title": "Water Refine",
+      "description": "Help your business grow with our SEO Experts"
+    }
+  ],
   "articlesPosts": [
     {
       "number": "01",

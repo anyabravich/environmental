@@ -12,6 +12,9 @@ const theme = {
       default: '#53C351',
       hover: '#359433',
       green: '#53C351',
+      dark: {
+        green: '#1C3A27',
+      },
     },
     secondary: {
       rich: {
@@ -21,6 +24,8 @@ const theme = {
   },
   radius: {
     button: 8,
+    mission: 16,
+    latest: 16,
   },
   transition: {
     hover: 'all 200ms linear',
