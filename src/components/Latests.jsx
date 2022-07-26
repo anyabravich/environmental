@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 import { rem } from 'polished';
 import Container from './Container';
@@ -7,7 +7,6 @@ import Button from './Button';
 import LatestsHover from './LatestsHover';
 
 const Latests = () => {
-  const [isShowHover, setIsShowHover] = useState(false);
   return (
     <LatestsWrap>
       <Container>

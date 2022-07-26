@@ -6,7 +6,10 @@ const theme = {
       title: '#2E2E2E',
       white: '#ffffff',
       disable: '#E6E6E6',
-      body: '#808080',
+      body: {
+        default: '#808080',
+        text: '#666666',
+      },
     },
     primary: {
       default: '#53C351',

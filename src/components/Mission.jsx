@@ -62,7 +62,7 @@ const MissionTitle = styled(H5Wrap)`
 `;
 
 const MissionDescription = styled(TextBodyWrap)`
-  color: ${(props) => props.theme.colors.text.body};
+  color: ${(props) => props.theme.colors.text.body.default};
   transition: color 100ms linear;
   ${MissionWrap}:hover & {
     color: ${(props) => props.theme.colors.text.disable};

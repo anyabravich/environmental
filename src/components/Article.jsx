@@ -41,7 +41,7 @@ const ArticleTitle = styled(H2Wrap)`
   margin-bottom: ${rem(24)};
 `;
 const ArticleDescription = styled(TextBodyWrap)`
-  color: ${(props) => props.theme.colors.text.body};
+  color: ${(props) => props.theme.colors.text.body.default};
   margin-bottom: ${rem(40)};
 `;
 
