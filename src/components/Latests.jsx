@@ -19,17 +19,25 @@ const Latests = () => {
         </LatestsInner>
         <LatestsItems>
           <LatestsItemBig>
-            <LatestsHover size={'big'} />
+            <LatestHoverWrap>
+              <LatestsHover size={'big'} />
+            </LatestHoverWrap>
           </LatestsItemBig>
-          <LatestsItemSmallOne
-            onMouseEnter={() => setIsShowHover(true)}
-            onMouseLeave={() => setIsShowHover(false)}>
-            <LatestsHover isShowHover={isShowHover} />
+          <LatestsItemSmallOne>
+            <LatestHoverWrap>
+              <LatestsHover />
+            </LatestHoverWrap>
           </LatestsItemSmallOne>
           <LatestsItemSmallTwo>
-            <LatestsHover isShowHover={isShowHover} />
+            <LatestHoverWrap>
+              <LatestsHover />
+            </LatestHoverWrap>
           </LatestsItemSmallTwo>
-          <LatestsItemSmallThree />
+          <LatestsItemSmallThree>
+            <LatestHoverWrap>
+              <LatestsHover />
+            </LatestHoverWrap>
+          </LatestsItemSmallThree>
         </LatestsItems>
       </Container>
     </LatestsWrap>
@@ -93,6 +101,26 @@ const LatestsItemSmallThree = styled.div`
   grid-area: LatestsItemSmallThree;
   background: url('images/project-4.jpg') no-repeat center center;
   ${latestItemStyles};
+`;
+
+const LatestHoverWrap = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+  ${LatestsItemBig}:hover &,
+  ${LatestsItemSmallOne}:hover &,
+  ${LatestsItemSmallTwo}:hover &,
+  ${LatestsItemSmallThree}:hover & {
+    transform: translateY(0%);
+    transition: transform 300ms linear;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    pointer-events: none;
+    transform: translateY(0%);
+  }
 `;
 
 export default Latests;

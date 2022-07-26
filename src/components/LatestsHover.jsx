@@ -53,12 +53,7 @@ const LatestsHoverWrap = styled.div`
   padding: ${(props) => (props.size === 'small' ? `6%` : `5.4%`)};
   color: ${(props) => props.theme.colors.white};
   background: ${(props) => props.theme.colors.primary.dark.green};
-  position: absolute;
   width: 100%;
-  left: 0;
-  bottom: 0;
-  /* transform: ${(props) => (props.isShowHover ? 'translateY(0%)' : 'translateY(100%)')}; */
-  transition: transform 300ms linear;
 `;
 
 export default LatestsHover;
