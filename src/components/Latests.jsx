@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { rem } from 'polished';
 import Container from './Container';
@@ -53,11 +53,13 @@ const LatestsTop = styled.div`
 const LatestsTitle = styled(H2Wrap)``;
 
 const LatestsItems = styled.div`
+  width: 100%;
   display: grid;
   gap: ${rem(16)};
   grid-template-areas: 'LatestsItemBig LatestsItemSmallOne' 'LatestsItemBig LatestsItemSmallTwo' 'LatestsItemBig LatestsItemSmallThree';
   grid-template-columns: 66% 1fr;
   overflow: hidden;
+  min-height: 100%;
   aspect-ratio: 1232 / 752;
 `;
 
