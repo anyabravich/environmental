@@ -65,7 +65,6 @@ const BannerSVG = styled.svg`
 const BannerContentInner = styled.div`
   padding-left: 13%;
   padding-right: 20%;
-
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     padding: 0 8%;
   }
