@@ -4,7 +4,7 @@ import { rem } from 'polished';
 import { H2Wrap } from './H2';
 import { TextBodyWrap } from './TextBody';
 import ReadMore from './ReadMore';
-import BigNumber, { BigNumberWrap } from './BigNumber';
+import { BigNumberWrap } from './BigNumber';
 
 const Article = ({
   number = '01',
@@ -40,8 +40,9 @@ const ArticleWrap = styled.article`
 const ArticleTitle = styled(H2Wrap)`
   margin-bottom: ${rem(24)};
 `;
+
 const ArticleDescription = styled(TextBodyWrap)`
-  color: ${(props) => props.theme.colors.text.body};
+  color: ${(props) => props.theme.colors.text.body.default};
   margin-bottom: ${rem(40)};
 `;
 
@@ -70,7 +71,6 @@ const ArticleImg = styled.div`
   overflow: hidden;
   background: url(${(props) => props.img}) no-repeat center center;
   background-size: cover;
-  /* aspect-ratio: 1232 / 400; */
 `;
 
 export default Article;

@@ -6,7 +6,10 @@ const theme = {
       title: '#2E2E2E',
       white: '#ffffff',
       disable: '#E6E6E6',
-      body: '#808080',
+      body: {
+        default: '#808080',
+        text: '#666666',
+      },
     },
     primary: {
       default: '#53C351',
@@ -35,6 +38,7 @@ const theme = {
     lg: '900px',
     xl: '1024px',
     xxl: '1200px',
+    xxxl: '1600px',
   },
 };
 

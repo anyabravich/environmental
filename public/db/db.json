@@ -1,4 +1,24 @@
 {
+  "blogArticles": [
+    {
+      "img": "blog-1",
+      "location": "Forest, Crisis",
+      "title": "The EU needs to hold the financial sector in global deforestation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipis cing elit. Integer gravida vitae ultrices urna et porttitor malesuada. Hendrerit diam netus."
+    },
+    {
+      "img": "blog-2",
+      "location": "Forest, Crisis",
+      "title": "The EU needs to hold the financial sector in global deforestation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipis cing elit. Integer gravida vitae ultrices urna et porttitor malesuada. Hendrerit diam netus."
+    },
+    {
+      "img": "blog-3",
+      "location": "Forest, Crisis",
+      "title": "The EU needs to hold the financial sector in global deforestation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipis cing elit. Integer gravida vitae ultrices urna et porttitor malesuada. Hendrerit diam netus."
+    }
+  ],
   "missionItems": [
     {
       "img": "icon-1",
