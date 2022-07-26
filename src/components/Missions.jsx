@@ -30,6 +30,12 @@ const Missions = () => {
 
 const MissionsWrap = styled.section`
   padding: ${rem(160)} 0 ${rem(320)};
+  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding: ${rem(160 / 2)} 0 ${rem(320 / 2)};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding: ${rem(160 / 4)} 0 ${rem(320 / 4)};
+  }
 `;
 
 const MissionsTitle = styled(H2Wrap)`
