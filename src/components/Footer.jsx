@@ -118,7 +118,7 @@ const FooterResentTitle = styled(TextBodyWrap)`
 `;
 
 const FooterFormField = styled.div`
-  margin-bottom: ${rem(24)};
+  margin-bottom: ${rem(16)};
 `;
 
 export default Footer;
