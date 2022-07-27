@@ -3,21 +3,16 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import { Link } from 'react-router-dom';
 
-const Logo = () => {
-  return (
-    <LogoWrap to={'/'}>
-      <LogoImg src={'/images/logo.svg'} alt="logo" />
-    </LogoWrap>
-  );
+const Logo = ({ img = 'logo' }) => {
+  return <LogoWrap to={'/'} img={img}></LogoWrap>;
 };
 
-const LogoWrap = styled(Link)`
+export const LogoWrap = styled(Link)`
   display: flex;
   width: ${rem(136)};
-`;
-
-const LogoImg = styled.img`
-  width: 100%;
+  height: ${rem(56)};
+  background: url(${(props) => `images/${props.img}.svg`}) no-repeat center center;
+  background-size: cover;
 `;
 
 export default Logo;

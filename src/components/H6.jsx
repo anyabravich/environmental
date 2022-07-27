@@ -8,9 +8,9 @@ const H6 = () => {
 
 export const H6Wrap = styled.h6`
   font-style: normal;
-  font-weight: 400;
   font-size: ${rem(16)};
   line-height: 150%;
+  font-weight: 700;
   color: ${(props) => props.theme.colors.text.body.text};
 `;
 

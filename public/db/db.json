@@ -1,4 +1,24 @@
 {
+  "contactItems": [
+    {
+      "icon": "location",
+      "isLink": false,
+      "link": "",
+      "text": "8819 Ohio St. South Gate, CA 90280"
+    },
+    {
+      "icon": "mail",
+      "isLink": true,
+      "link": "mailto:ourstudio@hello.com",
+      "text": "Ourstudio@hello.com"
+    },
+    {
+      "icon": "phone",
+      "isLink": true,
+      "link": "tel:+1 386-688-3295",
+      "text": "+1 386-688-3295"
+    }
+  ],
   "blogArticles": [
     {
       "img": "blog-1",

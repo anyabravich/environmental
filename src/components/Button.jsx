@@ -10,15 +10,24 @@ const Button = ({
   state = 'active',
   icon = false,
   align = 'left',
+  full = false,
 }) => {
   return (
-    <ButtonWrap view={view} size={size} type={type} state={state} icon={icon} align={align}>
+    <ButtonWrap
+      view={view}
+      size={size}
+      type={type}
+      state={state}
+      icon={icon}
+      align={align}
+      full={full}>
       {children}
     </ButtonWrap>
   );
 };
 
 const ButtonWrap = styled.button`
+  width: ${(props) => (props.full ? '100%' : 'auto')};
   background: ${(props) => props.theme.colors.primary.default};
   color: ${(props) => props.theme.colors.white};
   font-weight: 400;
