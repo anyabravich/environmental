@@ -56,6 +56,7 @@ const ArticleInner = styled.div`
     gap: ${rem(20)};
   }
 `;
+
 const ArticleContent = styled.div``;
 
 const ArticleBigNumber = styled(BigNumberWrap)`

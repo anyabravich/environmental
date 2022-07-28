@@ -48,6 +48,7 @@ const LatestsWrap = styled.section`
 `;
 
 const LatestsInner = styled.div``;
+
 const LatestsTop = styled.div`
   display: flex;
   flex-wrap: wrap;

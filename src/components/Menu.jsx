@@ -4,7 +4,6 @@ import { rem } from 'polished';
 import { Link } from 'react-router-dom';
 
 // TODO: элементы меню брать из БД [рефакторинг]
-
 const Menu = () => {
   return (
     <MenuWrap>

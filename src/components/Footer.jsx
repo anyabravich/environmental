@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Container from './Container';
 import styled from 'styled-components';
 import { rem } from 'polished';
-import Logo, { LogoWrap } from './Logo';
+import { LogoWrap } from './Logo';
 import { TextBodyWrap } from './TextBody';
 import { H6Wrap } from './H6';
 import Contact from './Contact';
@@ -69,6 +69,7 @@ const FooterWrap = styled.footer`
   padding: ${rem(80)} 0;
   background: #f4f9f8;
 `;
+
 const FooterInner = styled.div`
   display: grid;
   gap: ${rem(52)};

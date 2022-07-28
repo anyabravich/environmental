@@ -5,7 +5,6 @@ import { H5Wrap } from './H5';
 import { TextBodyWrap } from './TextBody';
 
 // TODO: перенести все transition в theme (время и timing-function)
-
 const Mission = ({
   className,
   img = 'icon-1',
@@ -24,7 +23,6 @@ const Mission = ({
 const MissionWrap = styled.article`
   padding: ${rem(32)};
   border-radius: ${(props) => rem(props.theme.radius.mission)};
-  /* max-width: ${rem(400)}; */
   transition: background 100ms linear;
   &:hover {
     background: ${(props) => props.theme.colors.primary.dark.green};

@@ -16,6 +16,7 @@ const ButtonPlayWrap = styled.button`
   align-items: center;
   gap: ${rem(8)};
 `;
+
 const ButtonPlayIcon = styled.img`
   width: ${rem(24)};
   height: ${rem(24)};
