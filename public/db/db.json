@@ -1,4 +1,26 @@
 {
+  "menuItems": [
+    {
+      "link": "/",
+      "name": "Home"
+    },
+    {
+      "link": "/about",
+      "name": "About"
+    },
+    {
+      "link": "/project",
+      "name": "Project"
+    },
+    {
+      "link": "/contacts",
+      "name": "Contacts"
+    },
+    {
+      "link": "/components",
+      "name": "Components"
+    }
+  ],
   "contactItems": [
     {
       "icon": "location",

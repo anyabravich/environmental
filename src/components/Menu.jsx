@@ -2,26 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-// TODO: элементы меню брать из БД [рефакторинг]
 const Menu = () => {
+  const [menuItems, setMenuItems] = useState([]);
+
+  useEffect(() => {
+    fetch('db/db.json')
+      .then((response) => response.json())
+      .then((json) => setMenuItems(json['menuItems']));
+  }, []);
+
   return (
     <MenuWrap>
-      <MenuItem>
-        <MenuLink to={'/'}>Home</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink to={'/about'}>About</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink to={'/project'}>Project</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink to={'/service'}>Service</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink to={'/contact'}>Contact</MenuLink>
-      </MenuItem>
+      {menuItems.map(({ link, name }, index) => (
+        <MenuItem key={index}>
+          <MenuLink to={link}>{name}</MenuLink>
+        </MenuItem>
+      ))}
     </MenuWrap>
   );
 };
@@ -42,7 +41,7 @@ const MenuLink = styled(Link)`
   font-weight: 400;
   font-size: ${rem(16)};
   line-height: 150%;
-  color: ${(props) => props.theme.colors.text.white};
+  color: ${(props) => props.theme.colors.white};
   &::before {
     content: '';
     position: absolute;

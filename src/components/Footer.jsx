@@ -55,7 +55,7 @@ const Footer = () => {
           <FooterItem>
             <FooterTitle>Join a Newsletter</FooterTitle>
             <FooterFormField>
-              <Input />
+              <Input children={'Your Email'} type={'email'} placeholder={'Enter Your Email'} />
             </FooterFormField>
             <Button full={true}>Subscribe</Button>
           </FooterItem>
@@ -67,7 +67,7 @@ const Footer = () => {
 
 const FooterWrap = styled.footer`
   padding: ${rem(80)} 0;
-  background: #f4f9f8;
+  background: ${(props) => props.theme.colors.secondary.soft.green};
 `;
 
 const FooterInner = styled.div`
@@ -83,7 +83,7 @@ const FooterLogo = styled(LogoWrap)`
 `;
 
 const FooterDescription = styled(TextBodyWrap)`
-  color: #808080;
+  color: ${(props) => props.theme.colors.text.body.default};
 `;
 
 const FooterTitle = styled(H6Wrap)`
@@ -111,7 +111,7 @@ const FooterResentIcon = styled.div`
   width: ${rem(48)};
   height: ${rem(48)};
   flex-shrink: 0;
-  background: #ebebeb;
+  background: ${(props) => props.theme.colors.placeholder};
 `;
 
 const FooterResentTitle = styled(TextBodyWrap)`

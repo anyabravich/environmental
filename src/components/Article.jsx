@@ -72,6 +72,7 @@ const ArticleImg = styled.div`
   overflow: hidden;
   background: url(${(props) => props.img}) no-repeat center center;
   background-size: cover;
+  border-radius: ${(props) => rem(props.theme.radius.article)};
 `;
 
 export default Article;
