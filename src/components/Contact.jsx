@@ -2,12 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { rem } from 'polished';
 
-const Contact = ({
-  icon = 'location',
-  isLink = true,
-  link = 'ourstudio@hello.com',
-  text = 'Ourstudio@hello.com',
-}) => {
+const Contact = ({ icon = '', isLink = true, link = '', text = '' }) => {
   return (
     <ContactWrap>
       <ContactIcon icon={icon} />

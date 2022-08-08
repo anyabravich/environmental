@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-const H6 = () => {
-  return <H6Wrap>H6</H6Wrap>;
+const H6 = ({ children }) => {
+  return <H6Wrap>{children}</H6Wrap>;
 };
 
 export const H6Wrap = styled.h6`
