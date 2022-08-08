@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import { rem } from 'polished';
 import { TextBodyWrap } from './TextBody';
 import { H5Wrap } from './H5';

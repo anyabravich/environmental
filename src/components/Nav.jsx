@@ -22,7 +22,7 @@ const Nav = () => {
 
 const NavWrap = styled.nav`
   padding: ${rem(32)} 0;
-  color: ${(props) => props.theme.colors.text.white};
+  color: ${(props) => props.theme.colors.white};
   background: ${(props) => props.theme.colors.secondary.rich.green};
 `;
 

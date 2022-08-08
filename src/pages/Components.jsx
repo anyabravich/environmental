@@ -18,9 +18,11 @@ const Components = () => {
 };
 
 const ComponentsWrap = styled.div`
-  padding: ${rem(20)} 0;
+  padding: ${rem(30)} 0;
 `;
+
 const ComponentsRow = styled.div``;
+
 const ComponentsLabel = styled.div`
   font-weight: 700;
   margin-bottom: ${rem(10)};

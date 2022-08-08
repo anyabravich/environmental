@@ -2,9 +2,10 @@ const theme = {
   colors: {
     black: '#000000',
     white: '#ffffff',
+    grey: '#cccccc',
+    placeholder: '#ebebeb',
     text: {
       title: '#2E2E2E',
-      white: '#ffffff',
       disable: '#E6E6E6',
       body: {
         default: '#808080',
@@ -23,15 +24,21 @@ const theme = {
       rich: {
         green: '#254330',
       },
+      soft: {
+        green: '#f4f9f8',
+      },
     },
   },
   radius: {
     button: 8,
     mission: 16,
     latest: 16,
+    input: 8,
+    article: 16,
   },
   transition: {
     hover: 'all 200ms linear',
+    default: '100ms linear',
   },
   breakpoints: {
     sm: '576px',

@@ -6,12 +6,7 @@ import { TextBodyWrap } from './TextBody';
 import ReadMore from './ReadMore';
 import { BigNumberWrap } from './BigNumber';
 
-const Article = ({
-  number = '01',
-  title = 'Protect Our Earth Against Climate Change',
-  img = 'images/article-1.jpg',
-  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin consectetur netus dui, ultrices ornare lectus ac egestas. Vivamus tellus vestibulum aliquet arcu a duis. Aliquam vel, in molestie morbi eleifend feugiat nunc fringilla in. Amet, sit elementum ut enim neque, adipiscing euismod ac. Molestie eu',
-}) => {
+const Article = ({ number = '', title = '', img = '', description = '' }) => {
   return (
     <ArticleWrap>
       <ArticleInner>
@@ -56,6 +51,7 @@ const ArticleInner = styled.div`
     gap: ${rem(20)};
   }
 `;
+
 const ArticleContent = styled.div``;
 
 const ArticleBigNumber = styled(BigNumberWrap)`
@@ -71,6 +67,7 @@ const ArticleImg = styled.div`
   overflow: hidden;
   background: url(${(props) => props.img}) no-repeat center center;
   background-size: cover;
+  border-radius: ${(props) => rem(props.theme.radius.article)};
 `;
 
 export default Article;

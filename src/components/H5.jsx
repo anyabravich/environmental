@@ -10,8 +10,7 @@ export const H5Wrap = styled.h2`
   font-weight: 700;
   font-size: ${rem(24)};
   line-height: 133%;
-  color: ${(props) =>
-    props.bgLight ? props.theme.colors.text.title : props.theme.colors.text.white};
+  color: ${(props) => (props.bgLight ? props.theme.colors.text.title : props.theme.colors.white)};
 `;
 
 export default H5;
