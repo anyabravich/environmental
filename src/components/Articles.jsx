@@ -16,8 +16,8 @@ const Articles = () => {
   return (
     <ArticlesWrap>
       <Container>
-        {articlesPosts.map(({ number, img, title, description }, index) => (
-          <Article number={number} img={img} title={title} description={description} key={index} />
+        {articlesPosts.map((props, index) => (
+          <Article {...props} key={index} />
         ))}
       </Container>
     </ArticlesWrap>
