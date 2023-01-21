@@ -23,14 +23,8 @@ const Blog = () => {
           <Button>See All</Button>
         </BlogHeader>
         <BlogArticles>
-          {blogArticles.map(({ img, location, title, description }, index) => (
-            <BlogArticle
-              img={img}
-              location={location}
-              title={title}
-              description={description}
-              key={index}
-            />
+          {blogArticles.map((props, index) => (
+            <BlogArticle {...props} key={index} />
           ))}
         </BlogArticles>
       </Container>
