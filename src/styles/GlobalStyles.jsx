@@ -1,9 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   *,
   &::after,
   &::before {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
   }
 
@@ -19,13 +21,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
   }
 
   ul, ol {
-    padding: 0;
-    margin: 0;
     list-style: none;
   }
 

@@ -1,12 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Container from './Container';
-import { H2Wrap } from './H2';
-import { TextBodyWrap } from './TextBody';
-import Button from './Button';
-import ButtonPlay from './ButtonPlay';
-import { CircleWrap } from './Circle';
+import styled from "styled-components";
+import { rem } from "polished";
+import Button from "./Button";
+import Title from "./Title";
+import Container from "./Container";
+import { CircleWrap } from "./Circle";
+import { TextBodyWrap } from "./TextBody";
+import ButtonPlay from "./ButtonPlay";
 
 const Header = () => {
   return (
@@ -14,10 +13,13 @@ const Header = () => {
       <Container>
         <HeaderInner>
           <HeaderContent>
-            <HeaderTitle>Lets Make our Earth Green and Clean ☘️</HeaderTitle>
+            <HeaderTitle tag="h2" color={"#fff"}>
+              Lets Make our Earth Green and Clean ☘️
+            </HeaderTitle>
             <HeaderTextBody>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat facilisis quam
-              volutpat turpis. Felis mi, ultrices ornare duis placerat erat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+              facilisis quam volutpat turpis. Felis mi, ultrices ornare duis
+              placerat erat.
             </HeaderTextBody>
             <HeaderButtons>
               <Button>Start Today</Button>
@@ -26,9 +28,9 @@ const Header = () => {
           </HeaderContent>
           <HeaderCircles>
             <HeaderCirclesInner>
-              <CircleOne w={400} h={400} img={'images/circle-1.jpg'} />
-              <CircleTwo w={240} h={240} img={'images/circle-2.jpg'} />
-              <CircleThree w={200} h={200} img={'images/circle-3.jpg'} />
+              <CircleOne w={400} h={400} img={"images/circle-1.jpg"} />
+              <CircleTwo w={240} h={240} img={"images/circle-2.jpg"} />
+              <CircleThree w={200} h={200} img={"images/circle-3.jpg"} />
             </HeaderCirclesInner>
           </HeaderCircles>
         </HeaderInner>
@@ -73,7 +75,7 @@ const HeaderCirclesInner = styled.div`
   position: relative;
 `;
 
-const HeaderTitle = styled(H2Wrap)`
+const HeaderTitle = styled(Title)`
   margin-bottom: ${rem(24)};
   max-width: ${rem(608)};
   width: 100%;

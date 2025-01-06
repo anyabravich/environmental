@@ -1,12 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import styled from "styled-components";
+import { rem } from "polished";
 
-const Circle = ({ w = 400, h = 400, img = 'images/circle-1.jpg' }) => {
+interface ICircle {
+  w?: number;
+  h?: number;
+  img?: string;
+}
+
+const Circle = ({ w = 400, h = 400, img = "images/circle-1.jpg" }: ICircle) => {
   return <CircleWrap w={w} h={h} img={img}></CircleWrap>;
 };
 
-export const CircleWrap = styled.div`
+export const CircleWrap = styled.div<{ w: number; h: number; img: string }>`
   width: ${(props) => rem(props.w)};
   height: ${(props) => rem(props.h)};
   border-radius: 50%;
