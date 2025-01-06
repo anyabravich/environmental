@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Container from './Container';
-import { H2Wrap } from './H2';
-import Mission from './Mission';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import Container from "./Container";
+import { H2Wrap } from "./H2";
+import Mission from "./Mission";
 
 const Missions = () => {
   const [missionItems, setMissionItems] = useState([]);
 
   useEffect(() => {
-    fetch('db/db.json')
+    fetch("db/db.json")
       .then((response) => response.json())
-      .then((json) => setMissionItems(json['missionItems']));
+      .then((json) => setMissionItems(json["missionItems"]));
   }, []);
 
   return (
     <MissionsWrap>
       <Container>
-        <MissionsTitle bgLight={true}>Our Mission to Save the Planet</MissionsTitle>
+        <MissionsTitle bgLight={true}>
+          Our Mission to Save the Planet
+        </MissionsTitle>
         <MissionsItems>
           {missionItems.map((props, index) => (
             <Mission {...props} key={index} />

@@ -5,19 +5,19 @@
       "name": "Home"
     },
     {
-      "link": "/about",
+      "link": "#about",
       "name": "About"
     },
     {
-      "link": "/project",
+      "link": "#project",
       "name": "Project"
     },
     {
-      "link": "/contacts",
+      "link": "#contacts",
       "name": "Contacts"
     },
     {
-      "link": "/components",
+      "link": "#components",
       "name": "Components"
     }
   ],

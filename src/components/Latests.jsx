@@ -1,14 +1,14 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { rem } from 'polished';
-import Container from './Container';
-import { H2Wrap } from './H2';
-import Button from './Button';
-import LatestsHover from './LatestsHover';
+import React from "react";
+import styled, { css } from "styled-components";
+import { rem } from "polished";
+import Container from "./Container";
+import { H2Wrap } from "./H2";
+import Button from "./Button";
+import LatestsHover from "./LatestsHover";
 
 const Latests = () => {
   return (
-    <LatestsWrap>
+    <LatestsWrap id="project">
       <Container>
         <LatestsInner>
           <LatestsTop>
@@ -19,7 +19,7 @@ const Latests = () => {
         <LatestsItems>
           <LatestsItemBig>
             <LatestHoverWrap>
-              <LatestsHover size={'big'} />
+              <LatestsHover size={"big"} />
             </LatestHoverWrap>
           </LatestsItemBig>
           <LatestsItemSmallOne>
@@ -64,7 +64,7 @@ const LatestsItems = styled.div`
   width: 100%;
   display: grid;
   gap: ${rem(16)};
-  grid-template-areas: 'LatestsItemBig LatestsItemSmallOne' 'LatestsItemBig LatestsItemSmallTwo' 'LatestsItemBig LatestsItemSmallThree';
+  grid-template-areas: "LatestsItemBig LatestsItemSmallOne" "LatestsItemBig LatestsItemSmallTwo" "LatestsItemBig LatestsItemSmallThree";
   grid-template-columns: 66% 1fr;
   overflow: hidden;
   min-height: 100%;
@@ -81,25 +81,25 @@ const latestItemStyles = css`
 
 const LatestsItemBig = styled.div`
   grid-area: LatestsItemBig;
-  background: url('images/project-1.jpg') no-repeat center center;
+  background: url("images/project-1.jpg") no-repeat center center;
   ${latestItemStyles};
 `;
 
 const LatestsItemSmallOne = styled.div`
   grid-area: LatestsItemSmallOne;
-  background: url('images/project-2.jpg') no-repeat center center;
+  background: url("images/project-2.jpg") no-repeat center center;
   ${latestItemStyles};
 `;
 
 const LatestsItemSmallTwo = styled.div`
   grid-area: LatestsItemSmallTwo;
-  background: url('images/project-3.jpg') no-repeat center center;
+  background: url("images/project-3.jpg") no-repeat center center;
   ${latestItemStyles};
 `;
 
 const LatestsItemSmallThree = styled.div`
   grid-area: LatestsItemSmallThree;
-  background: url('images/project-4.jpg') no-repeat center center;
+  background: url("images/project-4.jpg") no-repeat center center;
   ${latestItemStyles};
 `;
 

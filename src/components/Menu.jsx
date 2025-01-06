@@ -1,24 +1,33 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
-    fetch('db/db.json')
+    fetch("db/db.json")
       .then((response) => response.json())
-      .then((json) => setMenuItems(json['menuItems']));
+      .then((json) => setMenuItems(json["menuItems"]));
   }, []);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const target = e.target;
+    const href = target.getAttribute("href");
+    document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <MenuWrap>
       {menuItems.map(({ link, name }, index) => (
         <MenuItem key={index}>
-          <MenuLink to={link}>{name}</MenuLink>
+          <MenuLink href={link} onClick={(e) => handleClick(e)}>
+            {name}
+          </MenuLink>
         </MenuItem>
       ))}
     </MenuWrap>
@@ -35,7 +44,7 @@ const MenuWrap = styled.ul`
 
 const MenuItem = styled.li``;
 
-const MenuLink = styled(Link)`
+const MenuLink = styled.a`
   position: relative;
   padding-bottom: ${rem(8)};
   font-weight: 400;
@@ -43,7 +52,7 @@ const MenuLink = styled(Link)`
   line-height: 150%;
   color: ${(props) => props.theme.colors.white};
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
