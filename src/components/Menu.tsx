@@ -1,8 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import { rem } from "polished";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 
 const Menu = () => {
@@ -14,11 +13,13 @@ const Menu = () => {
       .then((json) => setMenuItems(json["menuItems"]));
   }, []);
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    const target = e.target;
+    const target = e.target as HTMLAnchorElement;
     const href = target.getAttribute("href");
-    document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+    if (href) {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

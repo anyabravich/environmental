@@ -1,8 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import styled from "styled-components";
+import { rem } from "polished";
 
-const TextBody = ({ children }) => {
+const TextBody = ({ children }: { children: React.ReactNode }) => {
   return <TextBodyWrap>{children}</TextBodyWrap>;
 };
 

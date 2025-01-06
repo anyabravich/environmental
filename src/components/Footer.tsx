@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import Container from './Container';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { LogoWrap } from './Logo';
-import { TextBodyWrap } from './TextBody';
-import { H6Wrap } from './H6';
-import Contact from './Contact';
-import Input from './Input';
-import Button from './Button';
+import { useEffect, useState } from "react";
+
+import styled from "styled-components";
+import { rem } from "polished";
+import { LogoWrap } from "./Logo";
+import { TextBodyWrap } from "./TextBody";
+
+import Input from "./Input";
+import Button from "./Button";
+import Container from "./Container";
+import Contact from "./Contact";
+import { H6Wrap } from "./H6";
 
 const Footer = () => {
   const [contactItems, setContactItems] = useState([]);
 
   useEffect(() => {
-    fetch('db/db.json')
+    fetch("db/db.json")
       .then((response) => response.json())
-      .then((json) => setContactItems(json['contactItems']));
+      .then((json) => setContactItems(json["contactItems"]));
   }, []);
 
   return (
@@ -23,10 +25,10 @@ const Footer = () => {
       <Container>
         <FooterInner>
           <FooterItem>
-            <FooterLogo to={'/'} img={'logo-footer'} />
+            <FooterLogo to={"/"} img={"logo-footer"} />
             <FooterDescription>
-              Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Integer gravida vitae
-              ultrices urna et porttitor malesuada.
+              Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Integer
+              gravida vitae ultrices urna et porttitor malesuada.
             </FooterDescription>
           </FooterItem>
           <FooterItem>
@@ -42,20 +44,26 @@ const Footer = () => {
             <FooterResentPost>
               <FooterResentIcon />
               <FooterResentTitle>
-                The EU needs to hold the financial sector in global deforestation
+                The EU needs to hold the financial sector in global
+                deforestation
               </FooterResentTitle>
             </FooterResentPost>
             <FooterResentPost>
               <FooterResentIcon />
               <FooterResentTitle>
-                The EU needs to hold the financial sector in global deforestation
+                The EU needs to hold the financial sector in global
+                deforestation
               </FooterResentTitle>
             </FooterResentPost>
           </FooterItem>
           <FooterItem>
             <FooterTitle>Join a Newsletter</FooterTitle>
             <FooterFormField>
-              <Input children={'Your Email'} type={'email'} placeholder={'Enter Your Email'} />
+              <Input
+                children={"Your Email"}
+                type={"email"}
+                placeholder={"Enter Your Email"}
+              />
             </FooterFormField>
             <Button full={true}>Subscribe</Button>
           </FooterItem>

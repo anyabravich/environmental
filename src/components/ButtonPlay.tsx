@@ -1,11 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import styled from "styled-components";
+import { rem } from "polished";
 
 const ButtonPlay = () => {
   return (
     <ButtonPlayWrap>
-      <ButtonPlayIcon src={'/images/icon-play.svg'} />
+      <ButtonPlayIcon src={"/images/icon-play.svg"} />
       <ButtonPlayText>How it Works</ButtonPlayText>
     </ButtonPlayWrap>
   );

@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { rem } from "polished";
+
+import Mission, { IMission } from "./Mission";
+import Title from "./Title";
 import Container from "./Container";
-import { H2Wrap } from "./H2";
-import Mission from "./Mission";
 
 const Missions = () => {
-  const [missionItems, setMissionItems] = useState([]);
+  const [missionItems, setMissionItems] = useState<IMission[]>([]);
 
   useEffect(() => {
     fetch("db/db.json")
@@ -17,9 +18,7 @@ const Missions = () => {
   return (
     <MissionsWrap>
       <Container>
-        <MissionsTitle bgLight={true}>
-          Our Mission to Save the Planet
-        </MissionsTitle>
+        <MissionsTitle tag="h2">Our Mission to Save the Planet</MissionsTitle>
         <MissionsItems>
           {missionItems.map((props, index) => (
             <Mission {...props} key={index} />
@@ -40,7 +39,7 @@ const MissionsWrap = styled.section`
   }
 `;
 
-const MissionsTitle = styled(H2Wrap)`
+const MissionsTitle = styled(Title)`
   max-width: ${rem(608)};
   width: 100%;
   margin-bottom: ${rem(40)};

@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Article from './Article';
-import Container from './Container';
+import { useEffect, useState } from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import Container from "./Container";
+import Article, { IArticle } from "./Article";
 
 const Articles = () => {
-  const [articlesPosts, setArticlesPosts] = useState([]);
+  const [articlesPosts, setArticlesPosts] = useState<IArticle[]>([]);
 
   useEffect(() => {
-    fetch('db/db.json')
+    fetch("db/db.json")
       .then((response) => response.json())
-      .then((json) => setArticlesPosts(json['articlesPosts']));
+      .then((json) => setArticlesPosts(json["articlesPosts"]));
   }, []);
 
   return (

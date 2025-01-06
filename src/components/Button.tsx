@@ -37,7 +37,15 @@ const Button = ({
   );
 };
 
-const ButtonWrap = styled.button`
+const ButtonWrap = styled.button<{
+  full?: boolean;
+  type?: string;
+  view?: string;
+  size?: string;
+  state?: string;
+  icon?: boolean;
+  align?: string;
+}>`
   width: ${(props) => (props.full ? "100%" : "auto")};
   background: ${(props) => props.theme.colors.primary.default};
   color: ${(props) => props.theme.colors.white};

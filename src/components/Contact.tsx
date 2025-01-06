@@ -1,12 +1,22 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { rem } from 'polished';
+import styled, { css } from "styled-components";
+import { rem } from "polished";
 
-const Contact = ({ icon = '', isLink = true, link = '', text = '' }) => {
+interface IContact {
+  icon: string;
+  isLink?: boolean;
+  link?: string;
+  text?: string;
+}
+
+const Contact = ({ icon, isLink, link, text }: IContact) => {
   return (
     <ContactWrap>
       <ContactIcon icon={icon} />
-      {isLink ? <ContainLink href={link}>{text}</ContainLink> : <ContactText>{text}</ContactText>}
+      {isLink ? (
+        <ContainLink href={link}>{text}</ContainLink>
+      ) : (
+        <ContactText>{text}</ContactText>
+      )}
     </ContactWrap>
   );
 };
@@ -17,10 +27,11 @@ const ContactWrap = styled.div`
   gap: ${rem(16)};
 `;
 
-const ContactIcon = styled.div`
+const ContactIcon = styled.div<{ icon: string }>`
   width: ${rem(24)};
   height: ${rem(24)};
-  background: url(${(props) => `images/icon-${props.icon}.svg`}) no-repeat center center;
+  background: url(${(props) => `images/icon-${props.icon}.svg`}) no-repeat
+    center center;
 `;
 
 const contactItemStylesText = css`

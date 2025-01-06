@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { rem } from "polished";
 
-const Input = ({ children, type, placeholder }) => {
+interface IInput {
+  children: React.ReactNode;
+  type: string;
+  placeholder: string;
+}
+
+const Input = ({ children, type, placeholder }: IInput) => {
   return (
     <InputLabel>
       {children}

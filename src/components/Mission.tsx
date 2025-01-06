@@ -1,10 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { H5Wrap } from './H5';
-import { TextBodyWrap } from './TextBody';
+import styled from "styled-components";
+import { rem } from "polished";
+import { H5Wrap } from "./H5";
+import { TextBodyWrap } from "./TextBody";
 
-const Mission = ({ className, img = '', title = '', description = '' }) => {
+export interface IMission {
+  className?: string;
+  img?: string;
+  title?: string;
+  description?: string;
+}
+
+const Mission = ({
+  className,
+  img = "",
+  title = "",
+  description = "",
+}: IMission) => {
   return (
     <MissionWrap>
       <MissionIcon img={img} className={className} />
@@ -28,16 +39,18 @@ const MissionWrap = styled.article`
   }
 `;
 
-const MissionIcon = styled.div`
+const MissionIcon = styled.div<{ img: string }>`
   width: ${rem(80)};
   height: ${rem(80)};
   margin-bottom: ${rem(24)};
   display: block;
-  background: url(${(props) => `images/mission/${props.img}.svg`}) no-repeat center center;
+  background: url(${(props) => `images/mission/${props.img}.svg`}) no-repeat
+    center center;
   background-size: cover;
   transition: background ${(props) => props.theme.transition.default};
   ${MissionWrap}:hover && {
-    background: url(${(props) => `images/mission/${props.img}-hover.svg`}) no-repeat center center;
+    background: url(${(props) => `images/mission/${props.img}-hover.svg`})
+      no-repeat center center;
     background-size: cover;
     transition: background ${(props) => props.theme.transition.default};
   }

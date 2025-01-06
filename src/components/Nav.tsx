@@ -1,10 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Container from './Container';
-import Logo from './Logo';
-import Menu from './Menu';
-import Button from './Button';
+import styled from "styled-components";
+import { rem } from "polished";
+import Button from "./Button";
+import Container from "./Container";
+import Logo from "./Logo";
+import Menu from "./Menu";
 
 const Nav = () => {
   return (
@@ -13,7 +12,7 @@ const Nav = () => {
         <NavInner>
           <Logo />
           <Menu />
-          <Button type={'standard'}>Login</Button>
+          <Button type={"standard"}>Login</Button>
         </NavInner>
       </Container>
     </NavWrap>

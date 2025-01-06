@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
-const Container = ({ children }) => {
+const Container = ({ children }: { children: React.ReactNode }) => {
   return <ContainerBox>{children}</ContainerBox>;
 };
 

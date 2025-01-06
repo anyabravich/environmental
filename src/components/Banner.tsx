@@ -1,9 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { H2Wrap } from './H2';
-import { TextBodyWrap } from './TextBody';
-import Button from './Button';
+import styled from "styled-components";
+import { rem } from "polished";
+import Title from "./Title";
+import Button from "./Button";
+import { TextBodyWrap } from "./TextBody";
 
 const Banner = () => {
   return (
@@ -17,10 +16,12 @@ const Banner = () => {
       </BannerSVG>
       <BannerContent clipPath="url(#myClip)">
         <BannerContentInner>
-          <BannerTitle>The Way You Help&nbsp;Us 🍀</BannerTitle>
+          <BannerTitle tag="h2" color={"#fff"}>
+            The Way You Help&nbsp;Us 🍀
+          </BannerTitle>
           <BannerDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat facilisis quam
-            volutpat turpis. Felis mi, ultrices ornare duis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+            facilisis quam volutpat turpis. Felis mi, ultrices ornare duis.
           </BannerDescription>
           <BannerButtons>
             <Button>Donate</Button>
@@ -35,12 +36,12 @@ const Banner = () => {
 const BannerWrap = styled.section`
   width: 100%;
   height: ${rem(672)};
-  background: url('images/banner-1.jpg') no-repeat center center;
+  background: url("images/banner-1.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
 `;
 
-const BannerContent = styled.div`
+const BannerContent = styled.div<{ clipPath: string }>`
   background: ${(props) => props.theme.colors.primary.dark.green};
   max-width: ${rem(807)};
   width: 100%;
@@ -70,7 +71,7 @@ const BannerContentInner = styled.div`
   }
 `;
 
-const BannerTitle = styled(H2Wrap)`
+const BannerTitle = styled(Title)`
   margin-bottom: ${rem(24)};
 `;
 

@@ -1,16 +1,28 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { H2Wrap } from "./H2";
-import { TextBodyWrap } from "./TextBody";
+import Title from "./Title";
 import ReadMore from "./ReadMore";
+import { TextBodyWrap } from "./TextBody";
 import { BigNumberWrap } from "./BigNumber";
 
-const Article = ({ number = "", title = "", img = "", description = "" }) => {
+export interface IArticle {
+  number: string;
+  title: string;
+  img: string;
+  description: string;
+}
+
+const Article = ({
+  number = "",
+  title = "",
+  img = "",
+  description = "",
+}: IArticle) => {
   return (
     <ArticleWrap>
       <ArticleInner>
         <ArticleContent>
-          <ArticleTitle bgLight={true}>{title}</ArticleTitle>
+          <ArticleTitle tag="h2">{title}</ArticleTitle>
           <ArticleDescription>{description}</ArticleDescription>
           <ReadMore />
         </ArticleContent>
@@ -31,7 +43,7 @@ const ArticleWrap = styled.article`
   }
 `;
 
-const ArticleTitle = styled(H2Wrap)`
+const ArticleTitle = styled(Title)`
   margin-bottom: ${rem(24)};
 `;
 
@@ -60,7 +72,7 @@ const ArticleBigNumber = styled(BigNumberWrap)`
   }
 `;
 
-const ArticleImg = styled.div`
+const ArticleImg = styled.div<{ img: string }>`
   width: 100%;
   height: ${rem(400)};
   overflow: hidden;

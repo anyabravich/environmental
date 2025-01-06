@@ -1,15 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { TextBodyWrap } from './TextBody';
-import { H5Wrap } from './H5';
+import styled from "styled-components";
+import { rem } from "polished";
+import { TextBodyWrap } from "./TextBody";
+import { H5Wrap } from "./H5";
 
-const LatestsHover = ({ size = 'small', isShowHover }) => {
+interface ILatestsHover {
+  size?: "small" | "large" | "big";
+  isShowHover?: boolean;
+}
+
+const LatestsHover = ({ size = "small", isShowHover }: ILatestsHover) => {
   return (
     <LatestsHoverWrap size={size} isShowHover={isShowHover}>
       <LatestsHoverText>
         <LatestsHoverSubTitle>Environment, Climate Change</LatestsHoverSubTitle>
-        <LatestsHoverTitle>Carbon Footprints and Climate Change</LatestsHoverTitle>
+        <LatestsHoverTitle>
+          Carbon Footprints and Climate Change
+        </LatestsHoverTitle>
       </LatestsHoverText>
       <LatestsHoverArrow />
     </LatestsHoverWrap>
@@ -45,12 +51,12 @@ const LatestsHoverTitle = styled(H5Wrap)`
   }
 `;
 
-const LatestsHoverWrap = styled.div`
+const LatestsHoverWrap = styled.div<{ size: string; isShowHover?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12%;
-  padding: ${(props) => (props.size === 'small' ? `6%` : `5.4%`)};
+  padding: ${(props) => (props.size === "small" ? `6%` : `5.4%`)};
   color: ${(props) => props.theme.colors.white};
   background: ${(props) => props.theme.colors.primary.dark.green};
   width: 100%;

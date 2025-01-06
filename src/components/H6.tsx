@@ -1,8 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import styled from "styled-components";
+import { rem } from "polished";
 
-const H6 = ({ children }) => {
+const H6 = ({ children }: { children: React.ReactNode }) => {
   return <H6Wrap>{children}</H6Wrap>;
 };
 

@@ -1,8 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import styled from "styled-components";
+import { rem } from "polished";
 
-const BigNumber = ({ children }) => {
+const BigNumber = ({ children }: { children: React.ReactNode }) => {
   return <BigNumberWrap>{children}</BigNumberWrap>;
 };
 

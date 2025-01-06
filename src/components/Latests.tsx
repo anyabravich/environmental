@@ -1,10 +1,10 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import Container from "./Container";
-import { H2Wrap } from "./H2";
+
 import Button from "./Button";
 import LatestsHover from "./LatestsHover";
+import Title from "./Title";
+import Container from "./Container";
 
 const Latests = () => {
   return (
@@ -12,7 +12,7 @@ const Latests = () => {
       <Container>
         <LatestsInner>
           <LatestsTop>
-            <LatestsTitle bgLight={true}>Our Latest Project</LatestsTitle>
+            <LatestsTitle tag="h2">Our Latest Project</LatestsTitle>
             <Button>See All</Button>
           </LatestsTop>
         </LatestsInner>
@@ -58,7 +58,7 @@ const LatestsTop = styled.div`
   margin-bottom: ${rem(40)};
 `;
 
-const LatestsTitle = styled(H2Wrap)``;
+const LatestsTitle = styled(Title)``;
 
 const LatestsItems = styled.div`
   width: 100%;
