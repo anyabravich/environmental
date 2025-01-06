@@ -1,12 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { H2Wrap } from './H2';
-import { TextBodyWrap } from './TextBody';
-import ReadMore from './ReadMore';
-import { BigNumberWrap } from './BigNumber';
+import styled from "styled-components";
+import { rem } from "polished";
+import { H2Wrap } from "./H2";
+import { TextBodyWrap } from "./TextBody";
+import ReadMore from "./ReadMore";
+import { BigNumberWrap } from "./BigNumber";
 
-const Article = ({ number = '', title = '', img = '', description = '' }) => {
+const Article = ({ number = "", title = "", img = "", description = "" }) => {
   return (
     <ArticleWrap>
       <ArticleInner>

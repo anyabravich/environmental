@@ -1,6 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
 
 const H1 = ({ children, weight = 700 }) => {
   return <H1Wrap weight={weight}>{children}</H1Wrap>;

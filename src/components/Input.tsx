@@ -1,6 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import styled from "styled-components";
+import { rem } from "polished";
 
 const Input = ({ children, type, placeholder }) => {
   return (
