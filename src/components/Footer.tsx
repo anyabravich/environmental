@@ -21,7 +21,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <FooterWrap>
+    <FooterWrap id="contacts">
       <Container>
         <FooterInner>
           <FooterItem>

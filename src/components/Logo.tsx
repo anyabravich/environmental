@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import { Link } from "react-router-dom";
 
-const Logo = ({ img = "" }: { img?: string }) => {
+const Logo = ({ img = "/logo" }: { img?: string }) => {
   return <LogoWrap to={"/"} img={img}></LogoWrap>;
 };
 

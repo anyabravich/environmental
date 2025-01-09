@@ -9,7 +9,7 @@ import ButtonPlay from "./ButtonPlay";
 
 const Header = () => {
   return (
-    <HeaderWrap>
+    <HeaderWrap id="home">
       <Container>
         <HeaderInner>
           <HeaderContent>

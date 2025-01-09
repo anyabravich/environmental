@@ -16,7 +16,7 @@ const Missions = () => {
   }, []);
 
   return (
-    <MissionsWrap>
+    <MissionsWrap id="about">
       <Container>
         <MissionsTitle tag="h2">Our Mission to Save the Planet</MissionsTitle>
         <MissionsItems>

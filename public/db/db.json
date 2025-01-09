@@ -1,7 +1,7 @@
 {
   "menuItems": [
     {
-      "link": "/",
+      "link": "#home",
       "name": "Home"
     },
     {
@@ -15,10 +15,6 @@
     {
       "link": "#contacts",
       "name": "Contacts"
-    },
-    {
-      "link": "#components",
-      "name": "Components"
     }
   ],
   "contactItems": [
